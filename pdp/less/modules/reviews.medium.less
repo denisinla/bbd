@@ -1,0 +1,134 @@
+section.reviews {
+    padding-top: 4em;
+    margin-top: 2em;
+
+    div.intro {
+        padding: 1em 4em;
+        padding-bottom: 3em;
+
+        span {
+            font-size: 0.6em;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-size: 3.6em;
+        }
+
+        div.scores {
+            margin-top: 1.5em;
+
+            &:after {
+                display: block;
+                content: '';
+                clear: both;
+            }
+
+            div.section-a {
+                width: 17em;
+                float: left;
+
+                div.review-score {
+                    font-size: 1.6em;
+                    line-height: 0.4em;
+                    margin-bottom: 0;
+
+                    span.total {
+                        display: none;
+                    }
+                }
+            }
+
+            div.section-b {
+                width: 17em;
+                float: left;
+
+                h3 {
+                    font-size: 1em;
+                }
+            }
+        }
+
+        a.write-a-review {
+            display: inline-block;
+            padding: 1em 2em;
+            font-size: 0.8em;
+            margin-top: 1em;
+        }
+
+    }
+
+    > ul {
+        padding: 0 3em;
+
+        > li {
+
+            max-width: 80em;
+            margin: 0 auto;
+
+            &:after {
+                content: '';
+                display: block;
+                clear: both;
+            }
+
+            div.social-score {
+                position: relative;
+                width: 100%;
+                background-color:yellow;
+
+                &:after {
+                    content: none
+                }
+
+                div.review-score {
+                    position: absolute;
+                    top: -0.2em;
+                    float: none;
+                    font-size: 0.92em;
+
+                    span.total {
+                        display: none;
+                    }
+                }
+
+                ul {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    float: none
+                }
+            }
+
+            div.section-a {
+                width: 15%;
+                float: left;
+                margin-top: 1em;
+
+                h5 {
+                    font-family: 'NeuzeitGro-Reg', sans-serif;
+
+                    span {
+                        display: block;
+                        font-size: 0.7em;
+                    }
+                }
+
+                h6 {
+                    margin-top: 2em;
+                    font-family: 'NeuzeitGro-Reg', sans-serif;
+                }
+            }
+
+            div.section-b {
+                width: 65%;
+                float: left;
+
+                h3 {
+                    margin: 0;
+                }
+            }
+        }
+    }
+}

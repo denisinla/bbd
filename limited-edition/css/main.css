@@ -1,0 +1,371 @@
+/*@import url("//hello.myfonts.net/count/283bb6");
+@import url("//hello.myfonts.net/count/283bbb");
+@import url("//hello.myfonts.net/count/283cdc");
+*/
+/* Color  Definitions */
+/* Button Colors Definitions */
+/* Typography Definition */
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+body {
+  font-size: 16px; }
+
+.roundedButton {
+  overflow: hidden;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px; }
+
+.button {
+  font-family: NeuzeitGro-Bol;
+  color: #333333;
+  text-transform: uppercase;
+  text-decoration: none; }
+
+.textLink {
+  background-image: url("../images/link-pointer.png");
+  background-repeat: no-repeat;
+  background-position: 100% 40%;
+  padding-right: 1.4em; }
+
+section {
+  overflow: hidden; }
+
+.goldButton {
+  background-image: -ms-linear-gradient(top, #ceae72 0%, #af9461 100%);
+  /* IE10 */
+  background-image: -moz-linear-gradient(top, #ceae72 0%, #af9461 100%);
+  /* Mozilla Firefox */
+  background-image: -o-linear-gradient(top, #ceae72 0%, #af9461 100%);
+  /* Opera */
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #ceae72), color-stop(1, #af9461));
+  /* Webkit (Safari/Chrome 10) */
+  background-image: -webkit-linear-gradient(top, #ceae72 0%, #af9461 100%);
+  /* Webkit (Chrome 11+) */
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#ceae72', endColorstr='#af9461');
+  /*For IE7-8-9*/
+  background-image: linear-gradient(top, #ceae72 0%, #af9461 100%);
+  /* Proposed W3C Markup */ }
+  .goldButton:hover {
+    background-image: -ms-linear-gradient(top, #af9461 0%, #ceae72 100%);
+    /* IE10 */
+    background-image: -moz-linear-gradient(top, #af9461 0%, #ceae72 100%);
+    /* Mozilla Firefox */
+    background-image: -o-linear-gradient(top, #af9461 0%, #ceae72 100%);
+    /* Opera */
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #af9461), color-stop(1, #ceae72));
+    /* Webkit (Safari/Chrome 10) */
+    background-image: -webkit-linear-gradient(top, #af9461 0%, #ceae72 100%);
+    /* Webkit (Chrome 11+) */
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#af9461', endColorstr='#ceae72');
+    /*For IE7-8-9*/
+    background-image: linear-gradient(top, #af9461 0%, #ceae72 100%);
+    /* Proposed W3C Markup */ }
+
+.topbarSection {
+  height: 60px;
+  background-color: #c7a86f;
+  text-align: center; }
+  .topbarSection .title {
+    display: inline-block;
+    padding-left: 39px;
+    font-family: NeuzeitGro-Bol;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    line-height: 60px;
+    background-image: url("../images/fire-icon.png");
+    background-repeat: no-repeat;
+    background-position: 0 50%; }
+    .topbarSection .title .number {
+      color: #fff; }
+
+.infoSection {
+  background-image: url("../images/small/person.png");
+  background-position: bottom right;
+  background-repeat: no-repeat;
+  background-color: #fefefe;
+  padding: 0 2em 172px; }
+  .infoSection .pointer {
+    width: 16px;
+    height: 8px;
+    position: absolute;
+    left: 49.5%;
+    background-image: url("../images/topbar-pointer.png"); }
+  .infoSection .text {
+    width: 100%;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    font-family: NeuzeitGro-Reg;
+    font-size: 1.6em;
+    color: #333333;
+    text-align: justify; }
+  .infoSection .button {
+    display: block;
+    float: left;
+    width: 100%;
+    height: 100px;
+    font-size: 1.8em;
+    color: #fff;
+    background-color: #c7a86f;
+    text-align: center;
+    line-height: 100px; }
+  .infoSection .contentContainer {
+    width: 100%;
+    margin: 3em 0 2em; }
+  .infoSection .name {
+    color: #333333;
+    text-transform: uppercase; }
+  .infoSection .numbers {
+    font-family: PlacardMTStd-Cond;
+    font-size: 8em;
+    color: #333333; }
+    .infoSection .numbers .separator {
+      color: #c7a86f; }
+  .infoSection .remainingText {
+    margin-top: 1em;
+    font-family: NeuzeitGro-Bol;
+    font-size: 1.4em;
+    color: #929294;
+    text-transform: uppercase; }
+  .infoSection .packageImageContainer {
+    position: relative;
+    top: -39px;
+    left: -2em;
+    overflow: hidden;
+    clear: both;
+    z-index: 1; }
+  .infoSection .actions {
+    position: relative;
+    top: 380px;
+    z-index: 10; }
+  .infoSection .personImageContainer {
+    display: none; }
+
+.interviewSection {
+  background-color: #c7a86f;
+  color: #fff; }
+  .interviewSection .image {
+    width: 98%;
+    margin-top: 100px; }
+  .interviewSection .content {
+    top: 9%;
+    left: 8%;
+    margin: 40px 35px 75px; }
+  .interviewSection h1 {
+    font-family: PlacardMTStd-Cond;
+    font-size: 3.7em;
+    text-transform: uppercase; }
+  .interviewSection .title {
+    color: #231f20; }
+  .interviewSection .text {
+    margin-top: 1.4em;
+    margin-bottom: 1.6em;
+    font-family: NeuzeitGro-Reg;
+    font-size: 1.5em; }
+  .interviewSection .actions {
+    font-family: NeuzeitGro-Bol; }
+    .interviewSection .actions a {
+      font-size: 1.4em;
+      font-weight: bold;
+      color: #231f20;
+      text-transform: uppercase;
+      text-decoration: none; }
+      .interviewSection .actions a:hover {
+        text-decoration: underline; }
+  .interviewSection .interview-video {
+    display: none;
+    position: absolute;
+    z-index: 3;
+    width: 100%;
+    height: 100%; }
+    .interviewSection .interview-video iframe {
+      width: 100%;
+      height: 100%; }
+    .interviewSection .interview-video .overlay-close {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      z-index: 2;
+      background: transparent;
+      font-size: 20px;
+      font-weight: 700;
+      cursor: pointer;
+      font-family: NeuzeitGro-Reg; }
+
+.imagesSection .image img {
+  visibility: hidden;
+  width: 98%; }
+.imagesSection .image1, .imagesSection .image2 {
+  background-repeat: no-repeat;
+  background-size: 100%; }
+.imagesSection .image1 {
+  background-image: url("../images/small/image1.jpg"); }
+.imagesSection .image2 {
+  background-image: url("../images/small/image2.jpg"); }
+.imagesSection .packageImage {
+  width: 55%; }
+
+.showLarge {
+  display: none; }
+
+@font-face {
+  font-family: 'NeuzeitGro-Bol';
+  src: url("../fonts/NeuzeitGroteskBold/283BB6_0_0.eot");
+  src: url("../fonts/NeuzeitGroteskBold/283BB6_0_0.eot?#iefix") format("embedded-opentype"), url("../fonts/NeuzeitGroteskBold/283BB6_0_0.woff") format("woff"), url("../fonts/NeuzeitGroteskBold/283BB6_0_0.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'NeuzeitGro-Reg';
+  src: url("../fonts/NeuzeitGroteskRegular/283BBB_0_0.eot");
+  src: url("../fonts/NeuzeitGroteskRegular/283BBB_0_0.eot?#iefix") format("embedded-opentype"), url("../fonts/NeuzeitGroteskRegular/283BBB_0_0.woff") format("woff"), url("../fonts/NeuzeitGroteskRegular/283BBB_0_0.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'PlacardMTStd-Cond';
+  src: url("../fonts/PlacardStdCondensed/283CDC_0_0.eot");
+  src: url("../fonts/PlacardStdCondensed/283CDC_0_0.eot?#iefix") format("embedded-opentype"), url("../fonts/PlacardStdCondensed/283CDC_0_0.woff") format("woff"), url("../fonts/PlacardStdCondensed/283CDC_0_0.ttf") format("truetype"); }
+
+/* < 320px */
+@media screen and (max-width: 20em) {
+  .showSmall {
+    display: block; }
+    .showSmall img {
+      width: 50%;
+      max-width: 100%; }
+
+  .showLarge {
+    display: none; } }
+/* < 640px */
+@media screen and (min-width: 48em) {
+  .showSmall {
+    display: none; }
+
+  .showLarge {
+    display: block; }
+
+  .topbarSection {
+    height: 50px; }
+    .topbarSection .title {
+      font-size: 1em;
+      line-height: 50px; }
+
+  .infoSection {
+    padding: 0;
+    background-image: none;
+    background-color: #f2f2f2;
+    position: relative; }
+    .infoSection .contentContainer {
+      float: left;
+      width: 45%;
+      margin: 5% 0 0; }
+    .infoSection .content {
+      width: 70%;
+      margin: 0 auto; }
+      .infoSection .content img {
+        width: 100%; }
+    .infoSection .text {
+      font-size: .9em;
+      color: #929294;
+      line-height: 1em;
+      margin-top: 1em;
+      margin-bottom: 10px; }
+    .infoSection .numbers {
+      font-size: 3em; }
+    .infoSection .remainingText {
+      font-size: .9em; }
+    .infoSection .actions {
+      top: 17px; }
+      .infoSection .actions .roundedButton {
+        width: 224px;
+        height: 50px; }
+      .infoSection .actions .button {
+        width: 224px;
+        height: 50px;
+        font-size: 1em;
+        line-height: 50px; }
+    .infoSection .personImageContainer {
+      display: block;
+      width: 55%;
+      overflow: hidden; }
+    .infoSection .personImage {
+      float: right;
+      width: 83%;
+      margin-right: 10%; }
+    .infoSection .packageImageContainer {
+      position: absolute;
+      right: 0;
+      bottom: 3%;
+      top: auto; }
+      .infoSection .packageImageContainer img {
+        float: right;
+        width: 52%; }
+
+  .interviewSection {
+    position: relative; }
+    .interviewSection .image {
+      float: left;
+      width: 55%;
+      margin-top: 6%; }
+    .interviewSection .content {
+      position: absolute;
+      top: 50%;
+      left: auto;
+      right: 0;
+      float: right;
+      margin-top: -5em;
+      width: 35%; }
+      .interviewSection .content h1 {
+        font-size: 2em; }
+      .interviewSection .content .text {
+        margin-top: 1em;
+        font-size: 1em;
+        line-height: 1em; }
+      .interviewSection .content .actions a {
+        font-size: .9em; }
+
+  .imagesSection .image {
+    float: right;
+    width: 50%; } }
+@media screen and (min-width: 64em) {
+  .infoSection .contentContainer {
+    margin: 7% 0 0; }
+    .infoSection .contentContainer .content {
+      width: 400px; }
+  .infoSection .text {
+    margin-top: 1em;
+    font-size: 1em;
+    line-height: 1.4em; }
+  .infoSection .numbers {
+    font-size: 5em; }
+
+  .interviewSection .content {
+    width: 350px;
+    margin-top: -6em; }
+    .interviewSection .content .text {
+      line-height: 1.4em; } }
+@media screen and (min-width: 90em) {
+  .infoSection .contentContainer {
+    margin-top: 110px;
+    padding-left: 148px; }
+  .infoSection .content {
+    margin: 0;
+    margin-right: 150px; }
+  .infoSection .text {
+    margin-top: 26px; }
+  .infoSection .numbers {
+    font-size: 6.3em; }
+  .infoSection .actions {
+    top: 65px; }
+  .infoSection .personImage {
+    width: auto; }
+  .infoSection .packageImageContainer img {
+    width: auto; }
+
+  .interviewSection .image {
+    width: auto;
+    margin-top: 100px; }
+  .interviewSection .content {
+    margin-top: -6em; }
+    .interviewSection .content h1 {
+      font-size: 2.6em; } }

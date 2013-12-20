@@ -1,0 +1,65 @@
+footer {
+    .DarkerGradient();
+
+    ul.main {
+        margin: 0 auto;
+        max-width: 60em;
+
+        &:after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        > li {
+            width: 33%;
+            float: left;
+            border: none;
+            max-height: auto;
+
+            padding: 3em 0 !important;
+
+            &.beats-army {
+                padding: inherit;
+            }
+
+            &.contact-us,
+            &.get-help {
+                max-height: none;
+
+                &:after {
+                    content: none
+                }
+            }
+        }
+    }
+
+    div.bottom {
+        padding: 1em 0;
+
+        &:after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        div {
+            max-width: 60em;
+            margin: 0 auto;
+
+            ul {
+                width: 50%;
+                float: left;
+
+                li {
+                    display: inline-block;
+                }
+            }
+
+            span {
+                display: inline-block;
+                float: right;
+            }
+        }
+    }
+}

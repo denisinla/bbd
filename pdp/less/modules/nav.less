@@ -1,0 +1,84 @@
+nav {
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+            .LightGradient();
+            border-top: 1px solid white;
+            border-bottom: 1px solid #BBB;
+
+            a {
+                color: @dgray;
+                text-decoration: none;
+                font-family: 'PlacardMTStd-Cond', sans-serif;
+                text-transform: uppercase;
+                font-size: 1.3em;
+                padding: 1em 0 1em 1.4em;
+                display: block;
+            }
+
+            &.studio-features {
+                // display: none;
+            }
+
+            &.reviews {
+                div {
+                    display: inline-block;
+                    font-size: 0.9em;
+                    position: relative;
+                    top: -0.2em;
+                    color: #AAA;
+                    margin-left: 0.5em;
+
+                    > span {
+                        display: inline-block;
+                        font-size: 0.8em;
+
+                        &.icon {
+                            background: transparent url(../images/stars-sprite.png) no-repeat left bottom;
+                            background-size: 100% auto;
+                            width: 6em;
+                            height: 1em;
+                        }
+
+                        &.total {
+                            font-size: 0.8em;
+                            position: relative;
+                            top: 0em;
+                        }
+                    }
+
+                    &.five span.icon {
+                        background-position: 0 0;
+                    }
+
+                    &.four span.icon {
+                        background-position: 0 -0.98em;
+                    }
+
+                    &.three span.icon {
+                        background-position: 0 -1.95em;
+                    }
+
+                    &.two span.icon {
+                        background-position: 0 -2.93em;
+                    }
+
+                    &.one span.icon {
+                        background-position: 0 -3.93em;
+                    }
+                }
+            }
+
+            &.buy-now {
+                display: none;
+            }
+        }
+    }
+}
+
+body.home nav ul li.studio-features { display: none; }
+body.reviews nav ul li.reviews { display: none; }
+body.gallery nav ul li.gallery { display: none; }

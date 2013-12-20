@@ -1,0 +1,26 @@
+section.gallery {
+
+    div,
+    img {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        display: block;
+        width: 100%;
+    }
+
+    div.z1 {
+        div.z1b {
+            &:after {
+                content: '';
+                display: block;
+                clear: both;
+            }
+
+            img {
+                width: 50%;
+                float: left;
+            }
+        }
+    }
+}

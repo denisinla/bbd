@@ -1,0 +1,327 @@
+header {
+    position: fixed;
+    width: 100%;
+    height: 6em;
+    overflow: visible;
+    left: 0;
+    top: 0;
+    z-index: 3000;
+
+    a.logo {
+        width: 5.5em;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: rgba(255, 255, 255, 0.1);
+        background-size: auto 45%;
+        background-position: 1.5em;
+        z-index: 100;
+    }
+
+    ul {
+        position: static;
+        width: auto;
+        float: left;
+
+        li {
+            a {
+                position: static;
+                margin: 0;
+                background-size: 380%;
+                opacity: 0.7;
+                width: 5.2em;
+                height: 5.5em;
+                background-color: rgba(0, 0, 0, 0.5);
+                .Transition(opacity, 0.5s);
+
+                &:hover {
+                    opacity: 1;
+                }
+            }
+
+            &.search {
+                position: absolute;
+                right: 15.9em;
+                border: none;
+
+                a {
+                    background-position: -16px 18px;
+                }
+
+                div {
+                    display: block;
+                    top: 0;
+                    overflow: hidden;
+                    width: 6.5em;
+                    left: auto;
+                    right: 100%;
+                    padding-left: 6.5em;
+                    .Transition(all, 0.5s);
+
+                    background: transparent url(../images/free-shipping.png) no-repeat center left;
+                    background-size: auto 65%;
+
+                    input {
+                        // display: none;
+                    }
+                }
+
+                &.open div {
+                    padding-left: 0;
+                    width: 13em;
+                }
+            }
+
+            &.cart {
+                border: none;
+                position: absolute;
+                right: 0;
+
+                a {
+                    background-position: -78px 18px;
+                }
+            }
+
+            &.profile {
+                border: none;
+                position: absolute;
+                right: 10.6em;
+
+                a {
+                    background-position: -47px 18px;
+                }
+            }
+
+            &.country-selection {
+                display: block;
+                border: none;
+                position: absolute;
+                right: 5.3em;
+
+                a {
+                    background-position: -146px 18px;
+                }
+            }
+
+            &.menu {
+                display: none;
+            }
+
+            &.menu-opts {
+                position: static;
+                width: auto;
+                padding: 0;
+                margin: 0;
+                display: block;
+                border: none;
+                border-right: 1px solid #333;
+
+                div.separation {
+                    display: none;
+                }
+
+                ul {
+                    position: static;
+                    float: none;
+                    display: block;
+                    width: 71.7em;
+                    margin-left: 5em;
+                    // background-color: rgba(200, 255, 168, 0.2);
+
+                    > li {
+                        a {
+                            opacity: 0.5;
+                            display: inline-block;
+                            padding: 1.2em 0;
+                            position: relative;
+                            width: 10em;
+                            height: auto;
+                            background: none;
+                            font-size: 2em;
+                            margin: 0;
+                            left: auto;
+                            top: auto;
+                            font-family: 'PlacardMTStd-Cond', sans-serif;
+                            font-weight: normal;
+                            text-transform: uppercase;
+                            text-decoration: none;
+                            letter-spacing: 1px;
+                            color: white;
+                            text-align: center;
+
+                            &:before {
+                                position: absolute;
+                                width: 1px;
+                                background-color: #333;
+                                height: 3.4em;
+                                content: '';
+                                display: block;
+                                top: 0;
+                                left: 0.3em;
+                            }
+
+                            &:after {
+                                position: absolute;
+                                width: 1px;
+                                background-color: #111;
+                                height: 3.4em;
+                                content: '';
+                                display: block;
+                                top: 0;
+                                right: -0.3em;
+                            }
+
+                            &:hover {
+                                opacity: 1
+                            }
+                        }
+
+                        &:first-child a:before {
+                            content: none
+                        }
+                    }
+
+                    li {
+                        position: static;
+                        display: block;
+                        width: auto;
+                        left: auto;
+                        height: auto;
+                        float: left;
+                        border: none;
+
+                        &:hover {
+                            // background-color: rgba(255, 0, 0, 0.3);
+                        }
+
+                        &:first-child {
+                            border-left: none;
+                        }
+
+                        div {
+                            z-index: 3000;
+                            position: absolute;
+                            .DarkerGradientInverted();
+                            top: 6em;
+                            left: 0;
+                            width: 100%;
+                            height: auto;
+                            overflow: hidden;
+                            max-height: 0px;
+                            .Transition(all, 1s);
+
+                            ul {
+                                margin: 0;
+                                width: 100%;
+                                text-align: center;
+
+                                li {
+                                    height: 21em;
+                                    display: inline-block;
+                                    float: none;
+                                    border: none;
+
+                                    a {
+                                        padding: 0;
+                                        position: static;
+                                        margin: 0;
+                                        margin-top: 3em;
+                                        margin-left: 3em;
+                                        padding-left: 2em;
+                                        border: none;
+                                        border-left: 1px solid #333;
+                                        line-height: 1.5em;
+                                        width: auto;
+                                        color: white;
+                                        opacity: 1;
+                                        font-size: 3em;
+
+                                        &:before,
+                                        &:after {
+                                            content: none;
+                                        }
+                                    }
+
+                                    &:first-child a {
+                                        margin-left: 0;
+                                        border: none;
+                                    }
+
+                                    &.headphones,
+                                    &.earphones,
+                                    &.speakers {
+                                        a {
+                                            width: 10em;
+                                            border: none;
+                                            position: relative;
+                                            top: 2em;
+                                            font-size: 2em;
+                                            .Transition(all, 0.2s);
+
+                                            &:after {
+                                                content: '';
+                                                display: inline-block;
+                                                width: 9em;
+                                                height: 5em;
+                                                background: transparent url(../images/product-sprites.png) no-repeat 0 0;
+                                                position: absolute;
+                                                left: 50%;
+                                                margin-left: -3.5em;
+                                                top: -5em;
+                                            }
+
+                                            &:hover {
+                                                .Transform(scale(1.1));
+                                            }
+                                        }
+                                    }
+
+                                    &.headphones {
+                                        a {
+                                            &:after {
+                                                background-position: 22px 0;
+                                            }
+                                        }
+                                    }
+
+                                    &.earphones {
+                                        a {
+                                            &:after {
+                                                background-position: -193px 0;
+                                            }
+                                        }
+                                    }
+
+                                    &.speakers {
+                                        a {
+                                            &:after {
+                                                background-position: -403px 0;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        &.open {
+                            background-color: #111;
+
+                            div {
+                                min-height: 20em;
+                                max-height: 20em;
+
+                                ul li {
+                                    background: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    div.shop:after {
+        right: 1.6em;
+    }
+}

@@ -1,0 +1,290 @@
+section.m2 {
+    .Module2BGBlue();
+    color: white;
+    height: 32.5em;
+    position: relative;
+
+    a.read-less,
+    a.read-more {
+        .DarkerGradient();
+        text-align: center;
+        display: block;
+        color: @red;
+        text-transform: uppercase;
+        font-size: 1em;
+        text-decoration: none;
+        font-family: 'NeuzeitGro-Bol', sans-serif;
+        padding: 1em 0;
+        border-top: 1px solid #333;
+        border-bottom: 1px solid #333;
+        position: absolute;
+        width: 100%;
+        z-index: 100;
+        top: 0;
+
+        &.read-less {
+            display: none;
+        }
+
+        &.read-more {
+            top: auto;
+            bottom: 3.4em;
+        }
+    }
+
+    ul {
+
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        &.feature-list {
+            position: relative;
+
+            width: 100%;
+            height: 29em;
+            overflow: hidden;
+
+            > li {
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                padding: 2em / 2;
+                padding-top: 0;
+
+                div.picture {
+                    height: 15em;
+                    display: block;
+                    background-repeat: no-repeat;
+                    background-position: right top;
+                    background-size: 85%;
+                    position: relative;
+                    right: -2em / 2;
+                }
+
+                &:nth-child(1) { .Transform(translateX(0%)); }
+                &:nth-child(2) { .Transform(translateX(100%)); }
+                &:nth-child(3) { .Transform(translateX(200%)); }
+                &:nth-child(4) { .Transform(translateX(300%)); }
+                &:nth-child(5) { .Transform(translateX(400%)); }
+                &:nth-child(6) { .Transform(translateX(500%)); }
+                &:nth-child(7) { .Transform(translateX(600%)); }
+                &:nth-child(8) { .Transform(translateX(700%)); }
+                &:nth-child(9) { .Transform(translateX(800%)); }
+                &:nth-child(10) { .Transform(translateX(900%)); }
+                &:nth-child(11) { .Transform(translateX(1000%)); }
+            }
+        }
+    }
+
+    h1, p {
+        margin: 0;
+        padding: 0;
+    }
+
+    h1 {
+        font-family: 'PlacardMTStd-Cond', sans-serif;
+        font-weight: normal;
+        text-transform: uppercase;
+        font-size: 1.8em;
+        color: @white;
+        margin-bottom: 0.6em;
+    }
+
+    p {
+        font-size: 0.9em;
+        color: @gray;
+        line-height: 120%;
+
+        span {
+            display: none;
+        }
+    }
+
+    ul.features {
+        margin-top: 1em;
+        display: table;
+
+        > li {
+            height: 3em;
+            padding-left: 3.5em;
+            position: relative;
+
+            display: table-cell;
+            vertical-align: middle;
+
+            width: 50%;
+
+            h4 {
+                display: inline-block;
+                margin: 0;
+                padding: 0;
+                text-transform: uppercase;
+                font-size: 0.6em;
+                font-family: 'NeuzeitGro-Bol', sans-serif;
+                color: @lgray;
+            }
+
+            p {
+                display: none;
+                font-size: 0.7em;
+                line-height: 120%;
+            }
+
+            span.icon {
+                width: 3em;
+                height: 3em;
+                display: block;
+                position: absolute;
+                left: 0;
+                top: 0;
+
+                background: transparent url(../images/features-sprites.png) no-repeat 0 0;
+                background-position: -3.5em;
+                background-size: auto 100%;
+            }
+
+            &.weights span.icon {
+                background-position: 0;
+            }
+
+            &.gauge span.icon {
+                background-position: -49px;
+            }
+
+            &.battery {
+                span.icon {
+                    background-position: -98px;
+                }
+
+                div {
+                    &:last-child {
+                        display: none;
+                    }
+
+                    span {
+                        font-family: 'NeuzeitGro-Bol', sans-serif;
+                        text-transform: uppercase;
+                        font-size: 0.7em;
+                    }
+                }
+            }
+
+            &.adaptive span.icon {
+                background-position: -147px;
+            }
+
+            &.dsp span.icon {
+                background-position: -195px;
+            }
+        }
+    }
+
+    ul.pages {
+        margin-top: 0em;
+        padding: 1.2em 0 1.2em 0;
+        text-align: center;
+        border-top: 1px solid #2A2A2A;
+        .BoxShadow(0, -15px, 60px, rgba(255, 255, 255, 0.1));
+        .Module2BGBottom();
+
+        li {
+            display: inline-block;
+            width: 0.5em;
+            height: 0.5em;
+            margin-right: 0.4em;
+            background-color: #333;
+            .BorderRadius(50%);
+
+            &.active {
+                background-color: #999;
+                position: relative;
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+
+    &.open {
+        height: 30.5em;
+
+        a.read-less {
+            display: block;
+        }
+
+        a.read-more {
+            display: none;
+        }
+
+        ul {
+            &.feature-list {
+                height: 27em;
+
+                > li {
+                    margin-top: 5em;
+
+                    div.picture {
+                        display: none;
+                    }
+                }
+
+            }
+        }
+
+        p span {
+            display: inline;
+        }
+
+        ul.features {
+            > li {
+                display: block;
+                width: 100%;
+                margin-bottom: 1em;
+                height: auto;
+
+                h4 {
+                    font-size: 0.8em;
+                }
+
+                p {
+                    display: inline-block;
+                    font-size: 0.8em;
+                }
+
+                &.battery {
+
+                    div {
+                        display: inline-block;
+                        margin: 0;
+                        height: auto;
+                        padding-right: 1em;
+                        border-right: 1px solid #333;
+
+                        &:last-child {
+                            margin-left: 1em;
+                            padding: 0;
+                            border: none;
+                        }
+
+                        span {
+                            font-family: 'NeuzeitGro-Reg', sans-serif;
+                            text-transform: uppercase;
+                            font-size: 0.7em;
+                            color: @gray;
+                            display: block;
+
+                            &.time {
+                                color: white;
+                                font-family: 'PlacardMTStd-Cond', sans-serif;
+                                font-size: 2em;
+                                line-height: 1.3em;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

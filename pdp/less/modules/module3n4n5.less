@@ -1,0 +1,449 @@
+section.m3,
+section.m4,
+section.m5,
+section.m6,
+section.m7 {
+    overflow: hidden;
+    width: 100%;
+    min-height: 8em;
+    max-height: 8em;
+    border-bottom: 1px solid #EEE;
+    display: block;
+    position: relative;
+    background-color: white;
+    .Transition(all, 1.2s);
+    .InsetBoxShadow(0, 10px, 30px, rgba(0, 0, 0, 0.05));
+
+    span.icon {
+        display: block;
+        width: 2em;
+        height: 2em;
+        background: transparent url(../images/open-icon.png) no-repeat right center;
+        background-size: 50%;
+
+        position: absolute;
+        right: 1em;
+        top: 3.25em;
+
+        cursor: pointer;
+        z-index: 100;
+    }
+
+    div.wrapper {
+    }
+
+    div.desc {
+        padding: 0 (3.5em / 2);
+        position: relative;
+
+        div {
+            position: absolute;
+            top: 2.5em;
+            display: inline-block;
+        }
+
+        span {
+            color: @gray;
+            font-size: 0.9em;
+            text-transform: uppercase;
+        }
+
+        h2 {
+            padding: 0;
+            margin: 0;
+            font-family: 'PlacardMTStd-Cond', sans-serif;
+            font-weight: normal;
+            text-transform: uppercase;
+            font-size: 2em;
+            line-height: 100%;
+            color: @dgray;
+        }
+
+        p {
+            position: relative;
+            display: inline-block;
+            margin-top: 7em;
+            opacity: 0;
+            font-size: 0.9em;
+            max-height: 0 !important;
+            color: @gray;
+            overflow: hidden;
+            .Transition(all, 0.5s);
+        }
+    }
+
+    &.m3 {
+        background: white url(../images/cables-closed.png) no-repeat top left;
+        background-size: 100%;
+    }
+
+    &.m4 {
+        div.cable1,
+        div.cable2,
+        div.cable-hp {
+            position: absolute;
+            background-color: green;
+
+            &.cable1 {
+                height: 6.5em;
+                width: 1.7em;
+                left: 4em;
+                bottom: 0em;
+                background: transparent url(../images/cable1.png) no-repeat top left;
+                background-size: 100%;
+            }
+
+            &.cable2 {
+                background: transparent url(../images/cable2.png) no-repeat top left;
+                background-size: 100%;
+                height: 13em;
+                width: 1em;
+                left: 2em;
+                bottom: -7.8em;
+                .Transition(all, 1s);
+            }
+
+            &.cable-hp {
+                background: transparent url(../images/cable-headphone.png) no-repeat top left;
+                background-size: 100%;
+                width: 11.5em;
+                height: 4.8em;
+                left: -3.5em;
+                // top: 4em;
+                top: -4.5em;
+                .Transition(all, 1s);
+            }
+        }
+
+        div.desc {
+            width: 60%;
+            float: right;
+            margin-right: 2em;
+
+            div {
+                top: 1.5em;
+            }
+        }
+    }
+
+    &.m5 {
+        height: auto;
+        background: white url(../images/mobile-unboxing.jpg) no-repeat 80% 100%;
+        background-size: 50%;
+        .Transition(max-height, 1.2s);
+
+        video {
+            display: none;
+        }
+
+        div.desc {
+            padding: 0;
+            height: auto;
+            padding-top: 7em;
+            max-height: 3em;
+            overflow: hidden;
+            .Transition(all, 1s);
+
+            > div {
+                padding: 0 1.75em;
+                top: 1.5em;
+                width: 60%;
+            }
+
+            div.specs {
+                position: static;
+                padding: 0;
+                text-align: center;
+                width: 100%;
+
+                img {
+                    margin: 0 auto;
+                    width: 75%;
+                }
+
+                ul {
+                    list-style: none;
+                    margin: 0;
+                    padding: 0;
+                    width: 100%;
+
+                    &:after {
+                        content: '';
+                        display: block;
+                        clear: both;
+                    }
+
+                    li {
+                        display: block;
+                        float: left;
+                        position: relative;
+
+                        &:nth-child(1) { width: 22%; }
+                        &:nth-child(2) { width: 22%; }
+                        &:nth-child(3) { width: 27%; }
+                        &:nth-child(4) { width: 29%; }
+
+                        &:after {
+                            width: 1px;
+                            height: 100%;
+                            background-color: #CCC;
+                            display: block;
+                            content: '';
+                            position: absolute;
+                            right: 0;
+                            top: 0;
+                        }
+
+                        &:last-child:after {
+                            content: none;
+                        }
+
+                        span {
+                            &.d1 {
+                                display: block;
+                                color: #111;
+                                font-family: 'PlacardMTStd-Cond', sans-serif;
+                                font-weight: normal;
+                                text-transform: uppercase;
+                                font-size: 1.7em;
+                                line-height: 1em;
+                            }
+
+                            &.d2 {
+                                display: block;
+                                font-size: 0.5em;
+                            }
+                        }
+                    }
+                }
+            }
+
+            div.features {
+                position: static;
+                margin-top: 1em;
+                padding: 0 1.3em;
+
+                &:after {
+                    content: '';
+                    display: block;
+                    clear: both;
+                }
+
+                ul {
+                    list-style: none;
+                    padding: 0;
+                    margin: 0;
+                    float: left;
+
+                    &:first-child {
+                        width: 56%;
+                    }
+
+                    &:last-child {
+                        float: right;
+                        width: 44%;
+                    }
+
+                    li {
+                        font-size: 0.9em;
+                        color: @gray;
+                        margin-bottom: 0.5em;
+
+                        h3 {
+                            color: #111;
+                            font-family: 'PlacardMTStd-Cond', sans-serif;
+                            font-weight: normal;
+                            text-transform: uppercase;
+                            letter-spacing: 1px;
+                            font-size: 1.5em;
+                        }
+
+                        a {
+                           color: @gray;
+                           text-decoration: none;
+                           text-transform: uppercase;
+
+                           &:hover {
+                            text-decoration: underline;
+                           }
+                        }
+
+                        &.ipod,
+                        &.ipad,
+                        &.iphone {
+                            height: 2em;
+
+                            img {
+                                height: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.m6 {
+        min-height: 8em;
+        max-height: none;
+
+        div.desc {
+            padding: 0;
+            height: auto;
+            max-height: 7em;
+            margin-top: 0.2em;
+            overflow: hidden;
+            .Transition(all, 1s);
+
+            > ul {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+
+                > li {
+                    padding: 0.5em 0;
+
+                    &:after {
+                        content: '';
+                        display: block;
+                        clear: both;
+                    }
+
+                    img {
+                        width: 35%;
+                        display: block;
+                        float: left;
+                    }
+
+                    div {
+                        float: left;
+                        width: 55%;
+                        position: static;
+                        display: block;
+                        margin-top: 0.8em;
+
+                        h3 {
+                            font-family: 'PlacardMTStd-Cond', sans-serif;
+                            font-weight: normal;
+                            text-transform: uppercase;
+                            font-size: 2.3em;
+                            padding: 0;
+                            margin: 0;
+                            line-height: 1em;
+
+                            span {
+                                font-size: 1em;
+                            }
+                        }
+
+                        div.rating {
+                            display: inline-block;
+                            font-size: 1em;
+                            position: relative;
+                            top: -0.2em;
+                            color: #AAA;
+                            margin-left: 0em;
+                            margin-top: 0.5em;
+
+                            span {
+                                display: inline-block;
+                                position: static;
+
+                                &.icon {
+                                    background: transparent url(../images/stars-sprite.png) no-repeat left bottom;
+                                    background-size: 100% auto;
+                                    width: 6em;
+                                    height: 1em;
+                                }
+
+                                &.total {
+                                    font-size: 0.9em;
+                                    position: relative;
+                                    top: -0.1em;
+                                }
+                            }
+
+                            &.five span.icon {
+                                background-position: 0 0;
+                            }
+
+                            &.four span.icon {
+                                background-position: 0 -0.98em;
+                            }
+
+                            &.three span.icon {
+                                background-position: 0 -1.95em;
+                            }
+
+                            &.two span.icon {
+                                background-position: 0 -2.93em;
+                            }
+
+                            &.one span.icon {
+                                background-position: 0 -3.93em;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.m7 {
+        display: none;
+    }
+
+    &.active {
+        max-height: 1500em;
+
+        span.icon {
+            background-image: url(../images/close-icon.png);
+        }
+
+        div.desc {
+            p {
+                opacity: 1;
+                max-height: 600px !important;
+            }
+        }
+
+        &.m3 {
+            background-image: url(../images/cables-open.png);
+
+            div.desc p {
+                margin-top: 10em;
+            }
+        }
+
+        &.m4 {
+            div.desc p {
+                margin-top: 9.3em;
+            }
+
+            div.cable-hp,
+            div.cable2 {
+                &.cable2 {
+                    bottom: -1.9em;
+                }
+
+                &.cable-hp {
+                    top: 0;
+                }
+            }
+        }
+
+        &.m5 {
+            background-image: url(../images/white-pixel.gif);
+
+            div.desc {
+                max-height: 60em !important;
+            }
+        }
+
+        &.m6 {
+            div.desc {
+                max-height: 40em;
+            }
+        }
+    }
+}

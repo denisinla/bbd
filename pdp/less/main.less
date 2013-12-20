@@ -1,0 +1,54 @@
+@import "mixins.less";
+
+*,
+*:before,
+*:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-backface-visibility: hidden;
+    -webkit-transition: translate3d(0,0,0);
+
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+ }
+
+html, body {
+    background-color: #292929;
+}
+
+a img {
+    border: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+    color: black;
+
+    font: normal 200 1em/16px 'NeuzeitGro-Reg', sans-serif;
+
+    -webkit-font-smoothing: antialiased;
+
+    div.content {
+        position: absolute;
+        overflow: auto;
+        -webkit-overflow-scrolling: touch;
+        height: 100%;
+        width: 100%;
+    }
+}
+
+@import "modules/header.less";
+@import "modules/module1.less";
+@import "modules/module2.less";
+@import "modules/gallery.less";
+@import "modules/reviews.less";
+@import "modules/module3n4n5.less";
+@import "modules/nav.less";
+@import "modules/footer.less";

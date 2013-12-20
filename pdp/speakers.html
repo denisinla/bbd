@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Beats by Dre</title>
+
+        <meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0" />
+        <meta charset="utf-8">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="format-detection" content="telephone=no">
+
+        <style type="text/css">
+            body {
+                margin: 0;
+                padding: 0;
+            }
+
+            img {
+                width: 100%;
+            }
+
+            img.desktop {
+                display: none;
+            }
+
+            @media (min-width: 600px) {
+                img.desktop {
+                    display: block;
+                }
+
+                img.mobile {
+                    display: none;
+                }
+            }
+
+        </style>
+    </head>
+    <body class="gallery">
+        <div id="viewporter">
+
+            <img src="images/image-pages/mobile/Speakers.jpg" class="mobile">
+            <img src="images/image-pages/desktop/Speakers.jpg" class="desktop">
+
+        </div>
+
+        <script src="js/viewporter.js"></script>
+    </body>
+</html>

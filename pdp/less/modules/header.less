@@ -1,0 +1,314 @@
+div.menu-opts-mobile {
+    position: absolute;
+    width: 0;
+    height: 100%;
+    right: 0;
+    margin: 0;
+    z-index: 2;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    .InsetBoxShadow(0.5em, 0, 1em, rgba(0, 0, 0, 0.4));
+
+    div.separation {
+        .DarkerGradient();
+        font-size: 0.5em;
+        height: 5em;
+        .InsetBoxShadow(0.1em, 0, 1em, rgba(0, 0, 0, 0.4));
+    }
+
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+            position: relative;
+
+            > a:first-child {
+                display: block;
+                font-family: 'PlacardMTStd-Cond', sans-serif;
+                font-weight: normal;
+                text-transform: uppercase;
+                text-decoration: none;
+                font-size: 1.1em;
+                padding: 0.7em 0 0.7em 0em;
+                .GrayGradient();
+                border-top: 1px solid #333;
+                position: relative;
+
+                span {
+                    color: white;
+                    opacity: 0.6;
+                    padding-left: 2.5em;
+                    .Transition(all, 1s, ease-in-out);
+                    position: relative;
+
+                    &:before {
+                        content: '';
+                        display: block;
+                        width: 0.8em;
+                        height: 1em;
+                        background: transparent url(../images/menu-sprites.png) no-repeat 0 0;
+                        background-size: 100%;
+                        position: absolute;
+                        left: 0.8em;
+                        top: 50%;
+                        margin-top: -0.5em;
+                    }
+                }
+
+                &:before {
+                    position: absolute;
+                    left: -0.4em;
+                    top: 0;
+                    content: '';
+                    display: block;
+                    width: 0.4em;
+                    height: 100%;
+                    .BoxShadow(0em, 0, 0.5em, rgba(0, 0, 0, 0.8));
+                }
+
+                &:after {
+                    position: absolute;
+                    top: 50%;
+                    margin-top: -0.9em / 2;
+                    right: 0.8em;
+
+                    content: '';
+                    display: block;
+                    background: transparent url(../images/menu-plus-minus-sprite.png) no-repeat top right;
+                    width: 0.8em;
+                    height: 0.8em;
+                    background-size: auto 100%;
+                }
+            }
+
+            div {
+                max-height: 0;
+                overflow: hidden;
+                background-color: #1b1b1b;
+                .InsetBoxShadow(0em, 0.5em, 1.5em, rgba(0, 0, 0, 0.6));
+                .Transition(all, 0.3s, ease-in-out);
+                font-size: 0.35em;
+
+                ul {
+                    padding: 1.5em 0;
+
+                    li > a:first-child {
+                        background: none;
+                        background-color: transparent;
+                        padding: 0.5em 0 0.5em 3.1em;
+                        font-size: 2.6em;
+                        color: @lgray;
+                        border-top: 0;
+
+                        &:after {
+                            content: none
+                        }
+                    }
+                }
+            }
+
+            &.shop a span:before {
+                background-position: 0px 0;
+            }
+
+            &.beats-audio a span:before {
+                background-position: 0px -24px;
+            }
+
+            &.support a span:before {
+                background-position: 0px -46px;
+            }
+
+            &.open {
+                > a:first-child {
+
+                    span {
+                        opacity: 1;
+                    }
+
+                    &:after {
+                        background-position: top left;
+                    }
+                }
+
+                div {
+                    max-height: 50em;
+                }
+            }
+        }
+    }
+}
+
+header {
+    .DarkGradient();
+
+    font-size: 0.5em;
+    height: 5em;
+    position: relative;
+    z-index: 2;
+
+    a {
+        display: inline-block;
+        background: transparent url(../images/header-sprite.png) no-repeat top left;
+        background-size: auto 100%;
+
+        &.logo {
+            width: 3em;
+            height: 3em;
+
+            position: absolute;
+            left: 2.4em / 2;
+            top: 2.4em / 2;
+        }
+    }
+
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        position: absolute;
+        right: 0;
+        top: 0px;
+
+        li {
+            height: 100%;
+            width: 5.5em;
+            margin: 0;
+            padding: 0;
+
+            display: inline-block;
+            position: relative;
+
+            border-left: 1px solid #2A2A2A;
+            border-right: 1px solid #1A1A1A;
+
+            float: left;
+
+            a {
+                width: 2.6em;
+                height: 2.6em;
+                position: absolute;
+
+                left: 50%;
+                top: 50%;
+                margin-left: -2.6em / 2;
+                margin-top: -2.6em / 2;
+            }
+
+            &.menu-opts {
+                border-left: none;
+            }
+
+
+            &.country-selection {
+                display: none;
+            }
+
+            &.search {
+                &:before {
+                    content: '';
+                    position: absolute;
+                    height: 100%;
+                    border-left: 1px solid #111;
+                    left: -2px;
+                }
+
+                a {
+                    background-position: -5.3em 0.2em;
+                }
+
+                &.open {
+                    div {
+                        display: block;
+                    }
+                }
+
+                div {
+                    display: none;
+                    position: absolute;
+                    left: -7.9em;
+                    top: 2.7em;
+                    width: 20.1em;
+                    font-size: 2em;
+
+                    input {
+                        border: none;
+                        width: 100%;
+                        color: white;
+                        padding: 1em 0.8em;
+                        font-size: 1em;
+                        -webkit-touch-callout: auto;
+                        -webkit-user-select: auto;
+                        font-family: 'NeuzeitGro-Bol', sans-serif;
+                        background-color: black;
+                        .BorderRadius(0);
+
+                        &:focus {
+                            outline-color: @red;
+                        }
+
+                        &:after {
+                            display: block;
+                            background-color: black;
+                            width: 0.7em;
+                            height: 0.7em;
+                            content: '';
+                            position: absolute;
+                            top: -0.3em;
+                            left: 50%;
+                            margin-left: -1em;
+                            .Transform(rotateZ(45deg));
+                        }
+                    }
+                }
+            }
+
+            &.cart a {
+                background-position: -10.8em 0.2em;
+            }
+
+            &.profile a {
+                background-position: -16.3em 0.2em;
+            }
+
+            &.menu a {
+                background-position: -21.8em 0.2em;
+            }
+        }
+    }
+
+    div.shop {
+        position: absolute;
+        font-size: 1.5em;
+        top: 3.8em;
+        width: 100%;
+        height: auto;
+        background-color: @red;
+        color: white;
+        z-index: 10;
+        text-align: center;
+        padding: 1em;
+        text-transform: uppercase;
+        font-family: 'NeuzeitGro-Bol', sans-serif;
+        .BoxShadow(0, 0, 2px, rgba(0, 0, 0, 0.8));
+        .Transition(all, 0.2s);
+        opacity: 0;
+        pointer-events: none;
+
+        &:after {
+            position: absolute;
+            right: 5.7em;
+            top: -0.3em;
+            content: '';
+            display: block;
+            width: 1em;
+            height: 1em;
+            background-color: @red;
+
+            .Transform(rotateZ(45deg));
+        }
+    }
+}

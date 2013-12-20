@@ -1,0 +1,573 @@
+div.gallery {
+    display: none;
+}
+
+#mobile-share-dialog {
+    opacity: 0;
+    background-color: #161616;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: 1000;
+    padding: 1em;
+    pointer-events: none;
+    .Transition(1s, all);
+
+    &.open {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    a.close {
+        display: block;
+        background: transparent url(../images/share-close.png) no-repeat 0 0;
+        background-size: 100%;
+        position: absolute;
+        width: 1.5em;
+        height: 1.5em;
+        top: 1em;
+        right: 1em;
+    }
+
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        top: 50%;
+        margin-top: -1.5em;
+        left: 1em;
+        right: 1em;
+        height: 3em;
+        .LightGradient();
+        .BorderRadius(4px);
+
+        li {
+            display: block;
+            height: 3em;
+            width: 20%;
+            float: left;
+            text-align: center;
+            border-right: 1px solid #FFF;
+            border-left: 1px solid #DDD;
+
+            &:first-child {
+                border-left: none;
+            }
+
+            &:last-child {
+                border-right: none;
+            }
+
+            a {
+                -webkit-touch-callout: none;
+                -webkit-highlight-color: rgba(0, 0, 0, 0);
+                -webkit-outline: rgba(0, 0, 0, 0);
+                display: inline-block;
+                height: 100%;
+                width: 2em;
+                background: transparent url(../images/share-icons.png) no-repeat 0 0;
+                background-size: auto 66%;
+            }
+
+            &.facebook a { background-position: 0 9px; }
+            &.twitter a { background-position: -67px 9px; }
+            &.googlep a { background-position: -135px 9px; }
+            &.pinterest a { background-position: -202px 9px; }
+            &.email a { background-position: -270px 9px; }
+        }
+    }
+}
+
+section.m1 {
+    color: @dgray;
+    .Module1BG();
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 1.5em;
+
+    &:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+
+    div.color-picker {
+        width: 100%;
+        height: 3.8em;
+        position: absolute;
+        bottom: 4.5em;
+        overflow: hidden;
+        z-index: 100;
+
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            padding-left: 0.5em;
+            padding-top: 0em;
+            width: 150%;
+            height: 3em;
+            overflow: auto;
+
+            li {
+                display: inline-block;
+                width: 2.7em;
+                height: 2.7em;
+                .BorderRadius(0.3em);
+                .BoxShadow(1px, 1px, 2px, rgba(0, 0, 0, 0.4));
+                background: red url() no-repeat top left;
+                background-size: 100%;
+                margin: 0;
+                margin-right: 0.2em;
+                position: relative;
+
+                &.active:after {
+                    content: '';
+                    display: block;
+                    width: 60%;
+                    height: 60%;
+                    position: absolute;
+                    bottom: -4px;
+                    right: -4px;
+                    background: transparent url(../images/page-peel.png) no-repeat 15px 14px;
+                    background-size: auto 110%;
+                }
+
+                &.texture1 {
+                    background-image: url(../images/texture1.gif);
+
+                    &.active:after {
+                        background-position: -85px 4px;
+                    }
+                }
+
+                &.texture2 {
+                    background-image: url(../images/texture2.gif);
+
+                    &.active:after {
+                        background-position: -3px 2px;
+                    }
+                }
+
+                &.black {
+                    .DarkGradient();
+
+                    &.active:after {
+                        background-position: -3px 2px;
+                    }
+                }
+
+                &.red {
+                    .RedGradient();
+
+                    &.active:after {
+                        background-position: -44px 2px;
+                    }
+                }
+
+                &.white {
+                    .WhiteGradient();
+                    position: relative;
+
+                    &:before {
+                        content: '';
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        border: 1px solid #DDD;
+                        .BorderRadius(0.4em);
+                    }
+
+                    &.active:after {
+                        background-position: -85px 4px;
+                    }
+                }
+
+                &.orange {
+                    .OrangeGradient();
+
+                    &.active:after {
+                        background-position: -126px 2px;
+                    }
+                }
+
+                &.green {
+                    .GreenGradient();
+
+                    &.active:after {
+                        background-position: -168px 2px;
+                    }
+                }
+
+                &.blue {
+                    .BlueGradient();
+
+                    &.active:after {
+                        background-position: -210px 2px;
+                    }
+                }
+
+                &.separator {
+                    pointer-events: none;
+                    background: none;
+                    .BorderRadius(0);
+                    .NoBoxShadow();
+                    width: 0.8em;
+
+                    &:after {
+                        content: '';
+                        display: block;
+                        height: 100%;
+                        width: 1px;
+                        background-color: #CCC;
+                        position: absolute;
+                        left: 50%;
+                        margin-left: -1px;
+                    }
+                }
+            }
+        }
+    }
+
+    div.details-container {
+        h1 {
+            display: inline-block;
+            margin: 0;
+            padding: 1em;
+            padding-bottom: 0.5em;
+            height: auto;
+
+            > span {
+                line-height: 0.9em;
+                position: relative;
+                padding-right: 0.9em;
+                font-family: 'PlacardMTStd-Cond', sans-serif;
+                font-weight: normal;
+                text-transform: uppercase;
+                color: @dgray;
+                font-size: 1.5em;
+                display: inline-block;
+
+                &:after {
+                    content: '';
+                    display: block;
+                    width: 0.9em;
+                    height: 0.4em;
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+
+                    background: transparent url(../images/new.gif) no-repeat top right;
+                    background-size: auto 100%;
+                }
+            }
+
+            div.ctas {
+                span {
+                    color: @red;
+                    display: inline-block;
+                    text-transform: uppercase;
+                    font-size: 0.6em;
+                    letter-spacing: -1px;
+                    margin-top: 0.6em;
+                    padding: 0;
+                    position: relative;
+                    cursor: pointer;
+
+                    &:after {
+                        content: '';
+                        display: block;
+                        width: 1em;
+                        height: 0.6em;
+                        position: absolute;
+                        top: 0.25em;
+                        right: -1.3em;
+                        background: transparent url(../images/details-arrows.png) no-repeat top right;
+                        background-size: 100%;
+                        .Transition(all, 0.3s);
+                    }
+                }
+
+                div {
+                    display: inline-block;
+                    font-size: 0.9em;
+                    position: relative;
+                    color: #AAA;
+                    margin-left: 1.2em;
+                    top: 0.2em;
+
+                    span {
+                        display: inline-block;
+
+                        &:after {
+                            content: none
+                        }
+
+                        &.icon {
+                            background: transparent url(../images/stars-sprite.png) no-repeat left bottom;
+                            background-size: 100% auto;
+                            width: 8.6em;
+                            height: 1.5em;
+                        }
+
+                        &.total {
+                            background: none;
+                            font-size: 0.9em;
+                            position: relative;
+                            top: -0.24em;
+                            color: #CCC;
+                        }
+                    }
+
+                    &.five span.icon {
+                        background-position: 0 0em;
+                    }
+
+                    &.four span.icon {
+                        background-position: 0 -1.39em;
+                    }
+
+                    &.three span.icon {
+                        background-position: 0 -2.8em;
+                    }
+
+                    &.two span.icon {
+                        background-position: 0 -4.2em;
+                    }
+
+                    &.one span.icon {
+                        background-position: 0 -5.6em;
+                    }
+                }
+            }
+        }
+
+        div.details {
+            .Transition(all, 0.5s);
+            max-height: 0;
+            overflow: hidden;
+
+            background-color: #fbfbfb;
+            .InsetBoxShadow(0, 0, 5px, rgba(0, 0, 0, 0.5));
+
+            h2 {
+                font-family: 'PlacardMTStd-Cond', sans-serif;
+                font-weight: normal;
+                text-transform: uppercase;
+                color: @dgray;
+                font-size: 1.5em;
+                display: block;
+                margin: 0;
+                padding: 1em;
+                padding-bottom: 0;
+                height: auto;
+                line-height: 0.9em;
+            }
+
+            p {
+                color: #555;
+                font-size: 0.9em;
+                display: block;
+                margin: 0;
+                margin-top: 1em;
+                padding: 1.8em;
+                padding-top: 0.5em;
+                height: auto;
+                line-height: 1.2em;
+            }
+
+        }
+
+        &.open {
+            h1 div.ctas span:after {
+                background-position: bottom right;
+            }
+
+            div.details {
+                max-height: 1000px;
+            }
+        }
+    }
+
+    ul.gallery {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        position: relative;
+        width: 100%;
+        height: 18.5em;
+        overflow: hidden;
+
+        > li {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            padding-top: 0;
+
+            div.picture {
+                height: 15em;
+                display: block;
+                // background-color: red;
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: 85%;
+                position: relative;
+                opacity: 0.5;
+                .Transform(scale(0.9));
+                .Transition(all, 0.5s);
+            }
+
+            &.active {
+                div.picture {
+                    opacity: 1;
+                    .Transform(scale(1));
+                }
+            }
+
+            &:nth-child(1) { .Transform(translateX(0%)); }
+            &:nth-child(2) { .Transform(translateX(66%)); }
+            &:nth-child(3) { .Transform(translateX(200%)); }
+            &:nth-child(4) { .Transform(translateX(300%)); }
+            &:nth-child(5) { .Transform(translateX(400%)); }
+            &:nth-child(6) { .Transform(translateX(500%)); }
+            &:nth-child(7) { .Transform(translateX(600%)); }
+            &:nth-child(8) { .Transform(translateX(700%)); }
+            &:nth-child(9) { .Transform(translateX(800%)); }
+            &:nth-child(10) { .Transform(translateX(900%)); }
+            &:nth-child(11) { .Transform(translateX(1000%)); }
+        }
+    }
+
+    ul.pages {
+        display: none;
+        margin-top: 1em;
+        padding: 1.2em 0 1.2em 0;
+        text-align: center;
+
+        li {
+            display: inline-block;
+            width: 0.5em;
+            height: 0.5em;
+            margin-right: 0.4em;
+            background-color: #CCC;
+
+            .BorderRadius(50%);
+
+            &.active {
+                background-color: #333;
+                position: relative;
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+
+    div.qty-price {
+        float: left;
+        width: 26%;
+
+        padding-left: 0.6em;
+
+        a.qty-dropdown {
+            .WhiteGradient();
+            display: inline-block;
+            font-family: 'NeuzeitGro-Bol', sans-serif;
+            text-decoration: none;
+            color: @dgray;
+            text-transform: uppercase;
+            padding: 1em 2em 1em 1em;
+            .BorderRadius(0.3em);
+            .BoxShadow(1px, 1px, 2px, rgba(0, 0, 0, 0.4));
+            position: relative;
+
+            &:after {
+                content: '';
+                display: block;
+                width: 65%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                right: 0;
+                background: transparent url(../images/dropdown-icon.png) no-repeat center center;
+                background-size: 35%;
+            }
+        }
+
+        span {
+            font-family: 'PlacardMTStd-Cond', sans-serif;
+            font-weight: normal;
+            text-transform: uppercase;
+            color: @dgray;
+            font-size: 2.25em;
+            position: absolute;
+            top: 0.9em;
+            right: 0.9em;
+        }
+    }
+
+    div.shop-share {
+        float: left;
+        width: 73%;
+
+        a.add-to-cart {
+            .RedGradient();
+            display: inline-block;
+            font-family: 'NeuzeitGro-Bol', sans-serif;
+            text-decoration: none;
+            color: white;
+            text-transform: uppercase;
+            padding: 1em;
+            .BorderRadius(0.3em);
+            .BoxShadow(1px, 1px, 2px, rgba(0, 0, 0, 0.4));
+            width: 70%;
+            text-align: center;
+            margin-right: 0.4em;
+        }
+
+        a.share {
+            .WhiteGradient();
+            display: inline-block;
+            font-family: 'NeuzeitGro-Bol', sans-serif;
+            text-decoration: none;
+            color: @dgray;
+            text-transform: uppercase;
+            padding: 1em;
+            .BorderRadius(0.3em);
+            .BoxShadow(1px, 1px, 2px, rgba(0, 0, 0, 0.4));
+            width: 24%;
+            position: relative;
+
+            &:before {
+                content: '';
+                display: inline-block;
+            }
+
+            &:after {
+                content: '';
+                display: block;
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                background: transparent url(../images/share-icon.png) no-repeat center center;
+                background-size: 50%;
+            }
+
+            span {
+                display: none;
+            }
+        }
+
+        div.share-desktop {
+            display: none;
+        }
+    }
+}

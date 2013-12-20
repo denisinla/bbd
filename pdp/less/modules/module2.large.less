@@ -1,0 +1,63 @@
+section.m2 {
+
+    a.read-more,
+    a.read-less {
+        display: none;
+    }
+
+    ul.pages {
+        display: none;
+    }
+
+    ul.feature-list > li {
+        // .Module2BGBlue();
+        opacity: 1;
+        .Transition(opacity, 0.5s, ease-in-out, 0s);
+
+        &.active {
+            opacity: 1;
+        }
+
+        &:nth-child(1) { .Transform(translateX(0%)); }
+        &:nth-child(2) { .Transform(translateX(0%) translateY(0%)); top: 100%; }
+        &:nth-child(3) { .Transform(translateX(0%) translateY(0%)); top: 200%; }
+        &:nth-child(4) { .Transform(translateX(0%) translateY(0%)); top: 300%; }
+        &:nth-child(5) { .Transform(translateX(0%) translateY(0%)); top: 400%; }
+        &:nth-child(6) { .Transform(translateX(0%) translateY(0%)); top: 500%; }
+        &:nth-child(7) { .Transform(translateX(0%) translateY(0%)); top: 600%; }
+        &:nth-child(8) { .Transform(translateX(0%) translateY(0%)); top: 700%; }
+        &:nth-child(9) { .Transform(translateX(0%) translateY(0%)); top: 800%; }
+        &:nth-child(10) { .Transform(translateX(0%) translateY(0%)); top: 900%; }
+        &:nth-child(11) { .Transform(translateX(0%) translateY(0%)); top: 100%; }
+    }
+
+    &.parallax {
+        position: fixed;
+        top: 2.5em;
+        width: 100%;
+        z-index: 20;
+        background: none;
+
+        ul {
+            .Module2BGBlue();
+
+            li {
+                div.feature-content {
+                    h1,
+                    p,
+                    ul.features {
+                        opacity: 1 !important;
+
+                        li {
+                            opacity: 1 !important;
+                        }
+                    }
+                }
+            }
+
+            ul {
+                background: none;
+            }
+        }
+    }
+}
